@@ -1,0 +1,84 @@
+*{ /* El asterisco sirve para editar todo el html*/
+
+    text-align: center; /*sirve para acomodar donde irá el texto*/
+
+    font-size: x-large /*sirve para acomodar el tamaño de la letra*/
+}
+
+#identificador { /* El # sirve para señalar un identificador (id)*/
+    text-align: center;
+    font-size:400%;
+}
+
+.clase { /* El . sirve para señalar una clase */
+    color:seagreen
+}
+
+.otraClase {
+    color:red
+}
+
+/*  Aquí se muestra los selectores dentro de un div
+    Las etiquetas que se encuentren dentro de un div y que sean
+    párrafos se les dará el color blueviolet    
+*/
+div p {
+    color:blueviolet
+}
+/*   
+*/
+div h2, div h3 {
+    color:brown;
+}
+
+#borde {
+    border: 5px outset red
+    /* Estilos de bordes
+        dotted
+        dashed
+        solid
+        double
+        groove
+        ridge
+        inset
+        outset
+        none
+        hidden
+    */
+}
+#borde-redondeado {
+    /*Para hacer un borde redondeado usaremos la etiqueta radius y pasaremos como parámetro la medida del 
+      redondeado del borde
+    */
+    border-style: solid;
+    border-radius: 5px;
+    border-color: red;
+    /*Para modificar el ancho del borde usaremos la etiqueta width y pasaremos como parámetro la medida del 
+      ancho del borde
+
+      Los tamaños relativos son muy usados sobre todo porque son relativos al tamaño del elemento HTML
+      esto nos ayuda para que el elemento sea relativo dependiendo del dispositivo y el tamaño del elemento
+      HTML en el que se muestre
+
+      tamaños: 
+      em    --> son las veces del tamaño del elemento HTML por ejemplo 2em es 2 veces el tamaño del elemento
+      rem   --> son las veces del tamaño del elemento raíz HTML es decir la etiqueta HTML del index
+
+    */
+    border-width: 1in;
+
+}
+#fondo{
+    /*Con la propiedad de rgba podremos asignar el color de r, g, b y la a sería la intensidad del color 
+      siendo 0 un color totalmente transparente y 1 un color totalmente intenso
+
+      La etiqueta de opacity lo que hace es cambiar la intensidad del elemento completo, no solamente el fondo
+      del elemento sino que también se aplica a la fuente
+    */
+    background-color: rgba(255, 0, 0, 1);
+    /* opacity: 0.3;*/
+    height: 400px;
+    background-image: url("/Imágenes/Hot\ wheels.jpg");
+    background-size: cover;
+}
+

@@ -1,0 +1,16 @@
+*{ /* El asterisco sirve para editar todo el html*/
+
+    text-align: center; /*sirve para acomodar donde irá el texto*/
+
+    font-size: x-large /*sirve para acomodar el tamaño de la letra*/
+}
+
+#identificador { /* El # sirve para señalar un identificador (id)*/
+    text-align: center;
+    font-size:400%;
+}
+
+.clase { /* El . sirve para señalar una clase */
+
+}
+

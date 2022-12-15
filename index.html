@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <!--Este es el título de la página-->
+    <title>Mi primera web</title>
+
+    <!--Para declarar un estilo globalmente utilizo la etiqueta de 
+        style y ahí mismo específico el estilo y el 
+    -->
+    <style>
+        table, th, td {
+            border:1px solid green;
+        }
+    </style>
+</head>
+<!--Este es el cuerpo de la página-->
+<body>
+    <!--Los heading son importantes ya que son utilizadas por los motores de búsqueda para dar mejor colocación a la página web -->
+    <!--H1 es para poner títulos y las demás son para hacer las letras más pequeñas hasta llegar a H6-->
+    <h1>Este es un heading de la web con h1</h1>
+    <h2>Este es un heading de la web con h2</h2>
+    <h3>Este es un heading de la web con h2</h3>
+    <h4>Este es un heading de la web con h2</h4>
+    <h5>Este es un heading de la web con h2</h5>
+    <h6>Este es un heading de la web con h2</h6>
+
+    <!--La etiqueta p es para poner párrafos-->
+    <p>Este es un párrafo</p>
+    <p>Aquí pasé otro párrafo</p>
+
+    <!--La etiqueta span es para separar elementos de un párrafo-->
+    <p>
+        Este texto es <span style="color:blue">mucho más largo</span> y es para mostrar la etiqueta span
+    </p>
+
+    <!--La etiqueta br se usa para hacer un salto de línea
+        El atributo de target_blank sirve para abrir el hipervínculo en una nueva pestaña
+    -->
+    <p>
+        Estos<br>
+        son<br>
+        los<br>
+        saltos<br>
+        de<br>
+        línea<br>
+    </p>
+
+    <!--La etiqueta de a se usa para hacer un hipervínculo y dirigirte hacia otra página web-->
+    <a href="https://twitch.com">Entra a twitch</a> 
+    <br>
+    <a target="_blank" href="https://twitch.com">Entra a twitch en otra pestaña</a>
+    <br>
+
+    <!--La etiqueta de img es para agregar imágenes y se pueden agregar tanto localmente (dentro de tu dispositivo)
+        como globalmente (es decir dirigiendo la ruta de una imágen que se encuentra en un servidor web con su ruta específica)
+        
+        Para manipular el tamaño de ancho y alto de la imagen se utilizan las etiquetas de width y height 
+    -->
+    <img src="Imágenes/Blue image.jpeg" width="1200px" height="500px"><br>
+
+    <!--Para declarar un formulario se utiliza la etiqueta form
+        
+        El atributo de action especificar la ruta a la que se enviarán los datos del formulario
+
+        El atributo de method es para especificar el método que se va a utilizar para enviar dichos datos
+        que puede ser GET o POST 
+
+        La diferencia entre usar el method POST o GET es que
+            https://youtu.be/BdaQ55-JlPg    
+        Con el método GET, los datos que se envían al servidor se escriben en la misma dirección URL.
+       -Desventajas de GET:
+
+        -Su débil protección de datos: Los parámetros URL que se envían quedan visibles en la barra de 
+        direcciones del navegador y son accesibles sin clave en el historial de navegación, en el caché 
+        y en el log de los servidores.
+        -Otra desventaja es que su capacidad es limitada: dependiendo del servidor y del navegador, no es
+        posible introducir más de 2000 caracteres. Además, los parámetros URL solo pueden contener caracteres 
+        ASCII (letras, números, signos, etc.) y no datos binarios como archivos de audio o imágenes.
+        El método POST introduce los parámetros en la solicitud HTTP para el servidor. Por ello, no quedan 
+        visibles para el usuario. Además, la capacidad del método POST es ilimitada.
+
+       -Ventajas de POST
+        En lo relativo a los datos, como, por ejemplo, al rellenar formularios con nombres de usuario y contraseñas, 
+        el método POST ofrece mucha discreción. Los datos no se muestran en el caché ni tampoco en el historial de 
+        navegación. La flexibilidad del método POST también resulta muy útil: no solo se pueden enviar textos cortos, 
+        sino también otros tipos de información, como fotos o vídeos.
+
+       -Desventajas de POST
+        Cuando una página web que contiene un formulario se actualiza (por ejemplo, cuando se retrocede a la página anterior) 
+        los datos del formulario debentransferirse de nuevo (puede que alguna vez hayas recibido una de estas advertencias). 
+        Por este motivo, existe el riesgo de que los datos se envíen varias veces por error, lo que, en el caso de una tienda 
+        nline, puede dar lugar a pedidos duplicados. No obstante, las webs modernas de las tiendas suelen estar preparadas para 
+        evitar este tipo de problemas.
+    -->
+    <form action="/formulario" method="POST">
+        <!--
+            La etiqueta label se utiliza para indicar o mostrar 
+            los datos que requerimos que se escriban dentro del input
+            
+            El atributo for se usa para dar crear un identificador para luego
+            dirigirlo al cuadro de entrada de datos (input)
+        -->
+        <label for="nombre">Nombre</label>
+        <!--
+            La etiqueta de input se utiliza como una entrada de datos
+
+            El atributo de id se utiliza para emparejar el identificador del
+            label con el cuadro de entrada (input)
+
+            El atributo name se utiliza para darle un nombre a la variable 
+            en la que se guarda lo escrito por el usuario dentro del servidor
+
+            El atributo de placeholder se utiliza para indicar al usuario 
+            lo que se tiene que digitar dentro del input
+
+            El atributo de type se utiliza para el tipo de entrada del fomrmulario
+            por defecto se encuentra en tipo texto, pero podemos cambiarlo por los 
+            siguientes:
+
+            text:tipo texto
+            email: tipo correo
+            password: tipo contraseña (se oculta lo escrito dentro)
+            button: tipo boton
+            radio: tipo circular para seleccionar
+            checkbox: tipo caja para seleccionar 
+            file: para seleccionar un archivo 
+        -->
+        <input id="nombre" name="name" placeholder="Digíte su nombre aquí...">
+        <br>
+        <!---->
+        <label for="apellido">Apellido</label>
+        <input id="apellido" name="apellido" placeholder="Digíte su apellido aquí..." type="text">
+        <br>
+
+        <!--La etiqueta de textarea es básicamente lo mismo que input solo que es para textos más grandes
+            
+            Los atributos de cols y rows se utilizan para dar tamaño al cuadro de textarea
+
+
+        -->
+        <label for="comentario">Comentario</label>
+        <textarea cols="50" rows="10" id="comentario" type="text" placeholder="Escriba su comentario aquí..."></textarea>
+        <br>
+
+        <!-- Para hacer un botón para enviar todos los datos que se encuentren dentro de el 
+            formulario esaremos la etiqueta de input con el tipo submit
+        -->
+        <input type="submit">
+        <br>
+        
+        <!--Es mejor usar las etiquetas de button porque es más personalizable porque es una etiqueta y podemos darle clases y darle una
+            función con css o javascript 
+            
+        -->
+        <button type="button">Tipo botón</button>
+        <button type="submit">Tipo submit</button>
+        <button type="reset">Tipo reset</button>
+
+        <!-- La etiqueta de ul se utiliza para las listas no ordenadas-->
+        <p>Esta es una lista no ordenada:</p><br>
+        <ul>
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+            <li>Elemento 4</li>
+            <li>Elemento 5</li>
+        </ul>
+        <p>Esta es una lista ordenada:</p><br>
+
+        <!--El atributo de value se usa para indicar con el elemento que se inicia en la lista
+
+            Para cambiar el orden del tipo de la lista se cambia el estilo desde la etiqueta de ol
+        -->
+        <ol>
+            <li value="50">Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+            <li>Elemento 4</li>
+            <li>Elemento 5</li>
+            <li>
+                <ol style="list-style-type:lower-alpha">
+                    <li>Sub elemento 1</li>
+                    <li>Sub elemento 2</li>
+                    <li>Sub elemento 3</li>
+                </ol>
+            </li>
+        </ol>
+    </form>
+
+    <!--La etiqueta de table se utiliza para crear una tabla 
+        
+        El atributo de style es para darle borde a la tabla 
+    -->
+    <table style="border: 1px solid black;">
+       <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+       </tr>
+       <tr>
+            <td>Manzana</td>
+            <td>$25.00</td>
+       </tr> 
+       <tr>
+        <td>Naranja</td>
+        <td>$30.00</td>
+        <tr>
+            <td>Sandía</td>
+            <td>$40.00</td>
+       </tr> 
+   </tr> 
+    </table>
+    <!--De esta forma podemos poner para enviar un correo desde la página-->
+    <a href="mailto:fcandelariavalles18@gmail.com">Contáctame</a>
+
+    <a href="C:\Users\fcand\OneDrive - Universidad Autonoma de Nuevo León\Desktop\Aprendizaje\HTML\blog.html">Blog de Fernando</a>
+    <a href="C:\Users\fcand\OneDrive - Universidad Autonoma de Nuevo León\Desktop\Aprendizaje\HTML\practicacss.html">Práctica de Css</a>
+</body>
+</html>
